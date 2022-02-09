@@ -73,7 +73,7 @@
 		console.log('Created peer connection');
 
 		peerConnection.addEventListener('icecandidate', handleConnection);
-		peerConnection.addEventListener('addstream', gotRemoteMediaStream);
+		peerConnection.addEventListener('addstream', gotRemoteMediaStream, gotRemoteScreenStream);
 
 		const peerMediaStream = new MediaStream();
 		peerConnection.addStream(peerMediaStream);
